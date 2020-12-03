@@ -1,0 +1,150 @@
+@import './helper';
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.articles-container{
+  width: 100%;
+  padding-top: 4px;
+  height: calc(100% - 185px);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+}
+
+.result-container {
+  scroll-snap-align: start;
+  @include flexbox(row, space-between, flex-start);
+  margin: 0px 8px 8px 8px;
+  height: 140px;
+  border: 1px solid $gray-line;
+  border-radius: 6px;
+}
+
+
+.result-container:hover {
+  cursor: pointer;
+  -moz-box-shadow:    1px 0px 3px 3px rgb(192, 192, 192);
+  -webkit-box-shadow: 1px 0px 3px 3px rgb(192, 192, 192);
+  box-shadow:         1px 0px 3px 3px rgb(192, 192, 192);
+}
+
+.img-general-info-container {
+  max-width: 580px;
+  width: calc(100% - 140px);
+  height: 100%;
+  @include flexbox(row, flex-start, flex-start);
+}
+
+.img-container {
+  height: 100%;
+  width: 140px;
+  margin-right: 10px;
+}
+
+.venue-image {
+  height: 130px;
+  border-radius: 5px;
+  width: 130px;
+  margin: 5px;
+}
+
+.venue_name {
+  margin-top: 5px;
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+
+.venue_name:hover {
+  color: $purple;
+  cursor: pointer
+}
+
+.general-info { 
+  height: 100%;
+  margin-top: 3px;
+  @include flexbox(column, flex-start, flex-start);
+  width: 70%;
+
+
+  .yelp_rating {
+    font-size: 10px;
+  }
+
+  .covid_rating {
+    font-size: 10px;
+  }
+
+  .covid_review_count{
+    @include flexbox(row, center, center);
+    height: 100%;
+    font-size: 12px;
+    margin-left: 0px;
+  }
+
+  .review-place-description {
+    padding-top: 10%;
+    font-size: 15px;
+  }
+}
+
+.location {
+  text-align:right;
+  font-size: 12px;
+  margin-top: 10px;
+  padding-right: 10px;
+  min-width: 130px;
+  width: calc(100% - 450px);
+}
+
+.search-title-container {
+  @include flexbox(row, flex-end, center);
+  margin: 10px 20px 10px 20px;
+  padding: 0px 10px 30px 10px;
+  border-bottom: 1px solid $gray-line;
+  text-align: center;
+}
+.search-title-text {
+  position: fixed;
+  left: 27%;
+
+}
+.rating-outer-container {
+  @include flexbox(row, flex-start, center);
+  width: 300px;
+  font-size: 14px;
+  height: 25px;
+}
+
+.rating-title {
+  @include flexbox(row, flex-start, center);
+  width: 85px;
+  height: 100%;
+}
+
+.sample-review-container {
+  font-size: 12px;
+  margin-top: 5px;
+  width: 100%;
+  color: gray;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.sample-review-user {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.no-search-container {
+  @include flexbox(row, center, flex-start);
+  margin-top: 30px;
+}
+.review-header-link {
+  color:  #363f47;
+}
+.review-header-link:hover {
+  color: $salmon;
+}

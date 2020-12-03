@@ -1,0 +1,37 @@
+@import './helper';
+
+.results-container{
+  @include flexbox(column, center, center);
+  min-width: 400px;
+  flex-grow: 1;
+  background-color: white;
+  height: calc(100vh - 60px);
+}
+
+.articles-pagination-container{
+  width: 100%;
+  height: 100%;
+}
+
+.progress-bar-container {
+  @include flexbox(row, center, center);
+  align-self: center;
+  justify-self: center;
+  padding-top: 100px;
+}
+
+.pagination-container {
+  @include flexbox(row, center, center);
+  margin-bottom: 5px;
+}
+.begin-your-search {
+  @include flexbox(row, center, center);
+  text-align: center;
+  font-size: 24px;
+  position: absolute;
+  
+}
+
+.search-title-text {
+  margin-left: 16px;
+}

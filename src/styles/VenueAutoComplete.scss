@@ -1,0 +1,59 @@
+@import './helper';
+
+.venue-autocomplete-container {
+  @include flexbox(column, flex-start, flex-start);
+  position: fixed; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: calc((180.16px + (100% - 836.75px) / 2) - 50px);
+  top: 47px;
+  border: 1px solid $gray-line;
+  border-radius: 2px;
+  width: 262px;
+  height: auto;
+  background-color: black;
+  -moz-box-shadow:    1px 1px 5px 1px rgb(192, 192, 192);
+  -webkit-box-shadow: 1px 1px 5px 1px rgb(192, 192, 192);
+  box-shadow:         1px 1px 5px 1px rgb(192, 192, 192);
+}
+
+.autocomplete-list {
+  width: 100%;
+  font-weight: bold;
+      
+}
+
+.first {
+  border-top: 1px solid $gray-line;
+}
+
+.autocomplete-list-item {
+  background-color: #FFFFFF;
+  color: $text;
+  height: 30px;
+  width: calc(100% - 10px);
+  font-size: 16px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.autocomplete-list-item:hover {
+  cursor: pointer;
+  background-color: rgb(214, 213, 213);
+}
+
+.home-autocomplete-container {
+  @include flexbox(column, flex-start, flex-start);
+  position: absolute; /* Stay in place */
+  z-index: 2; /* Sit on top */
+  left: calc((100% - 74% + 80px) / 2);
+  top: 260px;
+  border-radius: 2px;
+  height: auto;
+  width: calc(50% - 73px);
+  -moz-box-shadow:    1px 0px 5px 1px rgb(192, 192, 192);
+  -webkit-box-shadow: 1px 0px 5px 1px rgb(192, 192, 192);
+  box-shadow:         1px 0px 5px 1px rgb(192, 192, 192);
+  background-color: #FFFFFF;
+}

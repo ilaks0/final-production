@@ -1,0 +1,50 @@
+@import './helper';
+
+.filter-container {
+  min-width: 260px;
+  width: calc((100% - 400px) * 0.3);
+  max-width: 290px;
+  height: calc(100vh - 60px);
+  background-color: #FFFFFF;
+  position: fixed;
+  top: 60px;
+  @include flexbox(column, flex-start, center);  
+  -moz-box-shadow:    1px 0px 5px 3px rgb(192, 192, 192);
+  -webkit-box-shadow: 1px 0px 5px 3px rgb(192, 192, 192);
+  box-shadow:         1px 0px 5px 3px rgb(192, 192, 192);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+}
+
+.price-filter-container {
+  width: 257px;
+  @include flexbox(row, center, center);
+  margin-bottom: 5%;
+  margin-top: 0;
+}
+.open-filter-container {
+  width: 100%;
+  @include flexbox(column, center, center);
+  margin-bottom: 5%;
+}
+.distance-filter-container {
+  width: 100%;
+  @include flexbox(column, center, center);
+  margin-bottom: 5%;
+  border-top: 1px solid $gray-line;
+  padding-top: 8px;
+
+}
+.category-filter-container {
+  width: 100%;
+  @include flexbox(column, center, center);
+  margin-bottom: 5%;
+  border-top: 1px solid $gray-line;
+  padding-top: 8px;
+}
+
+.filter-bar-header {
+  @include flexbox(row, space-between, flex-start);
+  width: 100%;
+}

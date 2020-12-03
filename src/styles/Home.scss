@@ -1,0 +1,206 @@
+@import './helper.scss';
+
+.home-layout {
+  background: #FFFFFF;
+  max-height: calc(100vh);
+}
+
+.home-widget-review-container {
+  @include flexbox(row, space-around, flex-start);
+  max-width: 1000px;
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 4px;
+  overflow: hidden;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.widget-container {
+  @include flexbox(column, flex-start, center);
+  margin-top: 0;
+}
+
+.home-reviews-container {
+  @include flexbox(column, flex-start, center);
+  padding-top: 10px;
+  max-width: 500px;
+}
+
+.site-description {
+  height: 40px;
+  color: $purple;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.search-home-container {
+  // background: linear-gradient(45deg, salmon 30%, #fcd0d4 90%);
+    background: linear-gradient(45deg, #fde3e5 30%, salmon 90%);
+
+  padding-top: 60px;
+  width: 100%;
+  @include flexbox(column, flex-start, center);
+  padding-bottom: 110px;
+}
+.top-label{
+  text-align: center;
+  font: $font-stack;
+  font-size: 1.6em;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+.top-container {
+  margin-top: 40px;
+  @include flexbox(column, center, center)
+}
+.home-search-l-container {
+  @include flexbox(row, center, center);
+  height: 50px;
+  max-width: 24%;
+  margin-right: 5px;
+}
+.home-search {
+  @include flexbox(row, center, center);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-search-v-container {
+  height: 50px;
+  width: 50%;
+  @include flexbox(row, flex-end, center);
+  padding-right: 4px;
+  
+}
+
+.home-search-v {
+  height: 100%;
+  width: 100%;
+  font-size: 24px;
+  outline: none;    
+  border-left: none;
+  border: none;
+  margin: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+
+}
+
+.home-search-v-container:hover > .search-prompt {
+  box-shadow: -2px 2px 6px 0px $light-purple;
+}
+
+.home-search-v-container:hover > .home-search-v {
+  box-shadow: 2px 2px 6px 0px $light-purple;
+}
+
+.home-search-l {
+  height: 50px;
+  width: 100%;
+  font-size: 24px;
+  outline: none;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.home-search-l-container:hover > .search-prompt-l {
+  box-shadow: -2px 2px 6px 0px $light-purple;
+}
+
+.home-search-l-container:hover .home-search-l {
+  box-shadow: 2px 2px 6px 0px $light-purple;
+}
+
+
+.home-search-l:focus,
+.home-search-v:focus {
+  box-shadow: 2px 2px 6px 0px $salmon;
+}
+.search-prompt {
+  @include flexbox(row, center, center);
+  font-size: 22px;
+  font-weight: bold;
+  background-color: white;
+  height: 100%;
+  border-right: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: default;
+}
+.search-prompt-l {
+  @include flexbox(row, center, center);
+  font-size: 22px;
+  cursor: default;
+  font-weight: bold;
+  background-color: white;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-search-home {
+  height: 50px;
+  cursor: pointer;
+  width: 50px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 3px;
+  border-radius: 5px;
+  background-color: $salmon;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media screen and (max-width: 815px) {
+  .home-widget-review-container {
+    @include flexbox(column, flex-start, center);    
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search-home-container {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+  .home-search {
+    @include flexbox(column, flex-start, center);
+  }
+  .home-search-v-container {
+    margin-bottom: 10px;
+  }
+  .home-search-l-container {
+    margin-bottom: 10px;
+    max-width: 50%;
+    width: 50%;
+  }
+  .search-prompt {
+    font-size: 18px;
+  }
+  .home-search-v {
+    font-size: 18px;
+  }
+  .search-prompt-l {
+    font-size: 18px;
+  }
+  .home-search-l {
+    font-size: 18px;
+  }
+}
+.home-loading {
+  margin-top: 45%;
+  align-self: center;
+}

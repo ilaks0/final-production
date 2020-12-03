@@ -1,0 +1,22 @@
+@import './helper';
+
+.search-page-layout {
+  width: 100%;
+  height: calc(100vh - 120px);
+  background-color: rgb(234, 238, 255);
+  @include flexbox(row, flex-start, flex-start);
+}
+
+.show-filters {
+  top: 130px;
+  left: 30px;
+}
+.filter-spacer {
+  left: 0;
+  min-width: 260px;
+  width: calc((100% - 400px) * 0.3 + 35px);
+  max-width: 290px;
+  height: calc(100vh - 60px);
+  top: 60px;
+  background-color:white;
+}

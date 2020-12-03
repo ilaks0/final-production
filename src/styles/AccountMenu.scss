@@ -1,0 +1,29 @@
+@import './helper.scss';
+
+// .profile-icon-container {
+//   @include flexbox(row, center, center);
+//   background-color: $salmon;
+//   border-radius: 50%;
+//   width: 41px;
+//   height: 41px;
+//   margin-right: 20px;
+//   margin-left: 10px;
+// }
+.profile-icon-container {
+  @include flexbox(row, center, center);
+  margin-right: 8px;
+  width: 42px;
+  height: 42px;
+  cursor: pointer;
+}
+
+// .user-nav-container {
+//   @include flexbox(row, flex-end, center);
+//   height: 46px;
+//   padding: 0;
+// }
+
+.username {
+  height: 100%;
+  width: 60px;
+}

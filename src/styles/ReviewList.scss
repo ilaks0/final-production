@@ -1,0 +1,56 @@
+@import './helper';
+
+
+.overall-rating-container {
+  width: 100%;
+  @include flexbox(row, flex-start, center);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.other-rating-container {
+  width: 100%;
+  @include flexbox(row, flex-start, center);
+  margin-bottom: 5px;
+}
+
+.rating-label {
+  width: 170px;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.load-toxicity {
+  position: fixed;
+  z-index: 5;
+  top: 37%;
+  left: 48%;
+  opacity: 0.6;
+}
+.rating-data {
+  @include flexbox(row, flex-start, center);
+}
+
+.review-count {
+  @include flexbox(row, flex-start, center);
+  padding-bottom: 5px;
+  height: 100%;
+}
+
+
+@media screen and (max-width: 650px) {
+  .review-count {
+    font-size: 12px;
+  }
+}
+
+.venue-avg-ratings {
+  margin-bottom: 20px;
+}
+
+.hide-scrollbar {
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

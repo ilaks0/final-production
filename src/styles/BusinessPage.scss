@@ -1,0 +1,281 @@
+@import './helper.scss';
+
+.business-page-container {
+  @include flexbox(column, flex-start, center);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: 1100px;
+}
+
+.left-col {
+  width: 70%;
+}
+
+.right-col {
+  @include flexbox(column, flex-start, flex-start);
+  width: 30%;
+}
+
+.row {
+  @include flexbox(row, flex-start, center);
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.icon {
+  @include flexbox(row, center, center);
+  width: 30px;
+}
+
+.data {
+  width: calc(100% - 30px);
+  margin-left: 5px;
+}
+
+
+
+.back-and-message-container {
+  width: 100%;
+  height: 48px;
+  @include flexbox(row, space-between, center);
+}
+
+.bus-data-row {
+  @include flexbox(row, flex-start, center);
+  width: 500px;
+  font-size: 18px;
+  height: 35px;
+}
+
+.rating-title-bus {
+  @include flexbox(row, flex-start, center);
+  width: 110px;
+  height: 100%;
+}
+
+.covid_review_count{
+  @include flexbox(row, center, center);
+  height: 100%;
+  margin-left: 0px;
+  font-size: 14px;
+}
+
+.images-container {
+  @include flexbox(row, space-around, center);
+  height: 240px;
+  width: 100%;
+  margin: 30px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 8px;
+}
+
+.bus-data {
+  @include flexbox(row, center, flex-start);
+  margin-left: 10px;
+}
+
+.business-container {
+  @include flexbox(column, flex-start, center);
+  margin-left: 10px;
+  width: 100%;
+}
+.photos {
+  height: 100%;
+  width: 100%;
+  @include flexbox(row, center, center);
+}
+
+.bus-images {
+  height: 200px;
+  width: 60%;
+  margin: 20px;
+  filter: grayscale(45%);
+  border-radius: 30px;
+  cursor:pointer;
+}
+.static-map-container {
+  margin-top: 30px;
+  margin-bottom: 5%;
+}
+.bus-title {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 1.2em;
+  color: #333;
+  padding-top: 6px;
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.bus-images:hover {
+  filter: grayscale(0%);
+  border-radius: 8px;
+}
+
+.time-block {
+  width: 85px;
+  @include flexbox(row, flex-end, center);
+}
+
+.rating {
+  @include flexbox(column, center, center);
+}
+
+.bus-buttons {
+  @include flexbox(row, space-between, center);
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.loc-label {
+  font-size: 20px;
+}
+
+.info-section {
+  width: 100%;
+  border-bottom: 1px solid $gray-line;
+}
+
+.write-review-btn {
+  position: -webkit-sticky;
+  position: sticky;   
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-left: 10%;
+  font-weight: bold;
+
+}
+
+.is-open {
+  font-weight: bold;
+  color: green;
+}
+.is-closed {
+  font-weight: bold;
+  color: red;
+}
+
+.location-hours {
+  @include flexbox(row, flex-start, flex-start);
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.map-label-group {
+  margin-right: 60px;
+}
+
+.bus-price {
+  @include flexbox(row, flex-start, center);
+}
+
+.category {
+  font-style: italic;
+  margin-left: 0px;
+}
+
+.hours-table {
+  width: 100%;
+}
+.table-container {
+  margin-top: 50px;
+  width: 280px;
+}
+
+.hours-table-row {
+  @include flexbox(row, flex-start, center);
+  width: 100% ;
+}
+
+.loading-circle {
+  align-self: center;
+  justify-self: center;
+  padding-top: 100px;
+  @include flexbox(row, center, center);
+}
+
+.close-icon:hover {
+  cursor: pointer;
+}
+
+.right-offset {
+  width: 64px;
+}
+
+.open {
+  font-weight: bold;
+  color: green;
+}
+
+.closed {
+  font-weight: bold;
+  color: red;
+}
+
+.review-chart-container {
+  margin-top: 40px;
+  box-sizing: border;
+  @include flexbox(row, flex-start, flex-start);
+  width: 100%;
+}
+
+#reviews-container {
+  width: 60%;
+  margin-left: 20px;
+  margin-right: 30px;
+}
+
+
+@media screen and (max-width: 600px) {
+  #reviews-container {
+    width: 90%;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+.edit-button {
+  @include flexbox(row, center, center);
+  left: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+.edit-button:hover {
+  cursor: pointer;
+  color: $salmon;
+}
+
+.td-day {
+  width: 35px;
+}
+
+.td-separator {
+  width: 15px;
+  @include flexbox(row, flex-end, center);
+}
+
+@media screen and (max-width: 988px) {
+  .review-chart-container {
+    @include flexbox(column-reverse, flex-start, center);
+    
+  }
+}
+
+.chart-filter-container {
+  @include flexbox(row, center, center);
+  margin-bottom: 10px;
+}
+
+.chart-filter-button {
+  font-size: 12px;
+}
