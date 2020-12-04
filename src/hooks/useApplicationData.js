@@ -76,8 +76,8 @@ const useApplicationData = () => {
     //         console.log(coords);
             dispatch({
               type: INIT_CENTER, center: {
-                lat: 42,
-                lng: -79,
+                lat: 43.6532,
+                lng: -79.3832,
                 city: 'Toronto',
                 region: 'ON'
               }
