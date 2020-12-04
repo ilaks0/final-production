@@ -1,10 +1,10 @@
 import { useReducer, useEffect, useState } from 'react';
-import {useCookies} from 'react-cookie';
-import axios from 'axios';
+// import {useCookies} from 'react-cookie';
+// import axios from 'axios';
 import appReducer, {
   AUTHORIZE,
-  CREATE,
-  DELETE,
+  // CREATE,
+  // DELETE,
   INIT_CENTER,
   LOGOUT,
   ADD_FAV,
@@ -15,8 +15,8 @@ import appReducer, {
 } from 'reducers/appReducer';
 // const socket = new WebSocket('');
 
-const GET_IP = 'https://api.ipify.org/?format=json';
-const GET_LATLNG = 'http://ip-api.com/json/';
+// const GET_IP = 'https://api.ipify.org/?format=json';
+// const GET_LATLNG = 'http://ip-api.com/json/';
 
 const initTops = {
   show: [],
@@ -45,27 +45,50 @@ const useApplicationData = () => {
   const [appState, dispatch] = useReducer(appReducer, initApp);
   const [tops, setTops] = useState(initTops);
   const [userDetails, setUserDetails] = useState(initReg);
-  const [cookies, setCookie, removeCookie] = useCookies();
+  // const [cookies, setCookie, removeCookie] = useCookies();
 
+  // useEffect(() => {
+  //   axios.get(GET_IP)
+  //     .then(body => {
+  //       axios.get(`${GET_LATLNG}/${body.data.ip}`)
+  //         .then(coords => {
+  //           console.log(coords);
+  //           dispatch({
+  //             type: INIT_CENTER, center: {
+  //               lat: coords.data.lat,
+  //               lng: coords.data.lon,
+  //               city: coords.data.city,
+  //               region: coords.data.region
+  //             }
+  //           });
+  //           return coords;
+  //         })
+  //         .then(() => getTops())
+  //         .catch((er) => console.log(er));
+  //     }).catch((err) => console.log(err));
+  //   // eslint-disable-next-line
+  // }, []);
   useEffect(() => {
-    axios.get(GET_IP)
-      .then(body => {
-        axios.get(`${GET_LATLNG}/${body.data.ip}`)
-          .then(coords => {
-            console.log(coords);
+    // axios.get(GET_IP)
+    //   .then(body => {
+    //     axios.get(`${GET_LATLNG}/${body.data.ip}`)
+    //       .then(coords => {
+    //         console.log(coords);
             dispatch({
               type: INIT_CENTER, center: {
-                lat: coords.data.lat,
-                lng: coords.data.lon,
-                city: coords.data.city,
-                region: coords.data.region
+                lat: 42,
+                lng: -79,
+                city: 'Toronto',
+                region: 'ON'
               }
             });
-            return coords;
-          })
-          .then(() => getTops())
-          .catch((er) => console.log(er));
-      }).catch((err) => console.log(err));
+            // return coords;
+          // })
+          // .then(() => 
+          getTops()
+          // )
+      //     .catch((er) => console.log(er));
+      // }).catch((err) => console.log(err));
     // eslint-disable-next-line
   }, []);
 
