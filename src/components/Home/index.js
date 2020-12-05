@@ -211,7 +211,7 @@ const Home = () => {
       
       <div className='search-home-container'>
         < div className='site-description'>
-          Find places to shop, eat and hangout that take pandemics seriously
+          Find places to shop, eat and hangout that take pandemics seriously. Mobile version under Development.
         </div>
         <Search
           isHome={true}
